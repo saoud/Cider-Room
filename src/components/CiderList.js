@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 
 function CiderList(props) {
+  console.log(props);
   return (
     <React.Fragment>
       <hr/>
       {props.ciderList.map((cider) =>
-      <Cider whenciderClicked = {props.onCiderSelection}
+      <Cider whenCiderClicked = {props.onCiderSelection}
         name={cider.name}
         brewer={cider.brewer}
         type={cider.type}

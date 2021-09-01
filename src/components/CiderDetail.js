@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 function CiderDetail(props){
   const { cider } = props;
+  console.log(props);
 
   function handlePouringPint(event) {
     event.preventDefault();

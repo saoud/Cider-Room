@@ -51,7 +51,7 @@ class CiderControl extends React.Component {
     let buttonText = null;
 
     if (this.state.selectedCider != null) {
-      currentlyVisibleState = <CiderDetail cider = {this.state.selecteCider}
+      currentlyVisibleState = <CiderDetail cider = {this.state.selectedCider}
       onClickingPour = {this.handlePouringSelectedCider} />
       buttonText = "Return to Cider List";
     }
@@ -59,7 +59,7 @@ class CiderControl extends React.Component {
       currentlyVisibleState = <NewCiderForm onNewCiderCreation={this.handleAddingNewCiderToList}/>;
       buttonText = "Return to Cider List";
     } else {
-      currentlyVisibleState = <CiderList CiderList={this.state.masterCiderList} onCiderSelection={this.handleChangingSelectedCider}/>;
+      currentlyVisibleState = <CiderList ciderList={this.state.masterCiderList} onCiderSelection={this.handleChangingSelectedCider}/>;
       buttonText = "Add Cider";
       
     }
